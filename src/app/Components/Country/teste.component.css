@@ -1,13 +1,12 @@
 main {
-    padding: 50px 100px;
+    padding: 50px 10%;
 }
 
-.filterContainer {
-    height: 50px;
-
+.filterContainer {  
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .filterContainer > div {
@@ -24,6 +23,7 @@ main {
 .filterContainer > .search {
     padding: 10px 40px;
     width: 400px;
+    height: 50px;
 }
 
 .filterContainer > .search > label {
@@ -41,6 +41,7 @@ main {
 
 .filterContainer > .filterCountry {
     width: 200px;
+    height: 50px;
     
     justify-content: center;
     
@@ -73,6 +74,7 @@ main {
     border-radius: 5px;
     transform: translateY(-10px);
 
+    box-shadow: 0 0px 10px -5px #000;
     background-color: #fff;
 
     display: none;
@@ -99,7 +101,7 @@ main {
 }
 
 .filterContainer > .filterCountry > div#select > span:first-child {
-    color: #333;
+    color: #555;
 }
 
 .filterContainer > .filterCountry > div#select > span:hover:not(:first-child) {
@@ -160,4 +162,15 @@ input {
 .countryContainer img {
     width: 100%;
     height: 200px;
+}
+
+@media (max-width: 830px) {
+    .filterContainer {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .filterContainer > .search {
+        width: 100%;
+    }
 }

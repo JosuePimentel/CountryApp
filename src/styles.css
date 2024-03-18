@@ -7,6 +7,25 @@
     margin: 0;
     box-sizing: border-box;
     transition: all .6s ease;
+    user-select: none;
+    appearance: none;
+    /* outline: none; */
+}
+
+::-webkit-scrollbar {
+    background-color: var(--VeryLightGray);
+    background-color: var();
+    width: 0.7vw;   
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--White);
+    height: 80px;
+}
+
+img {
+    pointer-events: none;
+    -webkit-user-drag: none;
 }
 
 :root {
