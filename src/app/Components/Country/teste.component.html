@@ -10,7 +10,7 @@
             <div id="select">
                 <span all>Filter by Country</span>
                 <span asia (click)="clickSelect('Asia')">Asia</span>
-                <span america (click)="clickSelect('America')">America</span> 
+                <span america (click)="clickSelect('Americas')">America</span> 
                 <span europe (click)="clickSelect('Europe')">Europe</span>
                 <span oceania (click)="clickSelect('Oceania')">Oceania</span>
             </div>
@@ -18,7 +18,7 @@
     </div>
 
     <div class="countryContainer">
-        @for (country of dados; track $index) {
+        @for (country of dataSelect; track $index) {
             <div class="card">
                 <div class="img"><img src="{{country.flags.png}}" alt=""></div>
                 <div class="containerCard">

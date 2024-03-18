@@ -10,7 +10,8 @@ import { DataService } from "../../services/data.service";
 })
 
 export class TesteComponent {
-    dados: any
+    dataOrigin: any
+    dataSelect: any
 
     constructor(private meuServico: DataService) {
         this.getDadosJSON()
@@ -18,8 +19,21 @@ export class TesteComponent {
 
     getDadosJSON() {
         this.meuServico.getCountry().subscribe(resp => {
-            this.dados = resp
+            this.dataOrigin = resp
+            this.dataSelect = resp
             // console.log(this.dados)
+        })
+    }
+
+    showContries(reg: string) {
+        let container = document.querySelector('.countryContainer')
+
+        this.dataSelect = []
+        this.dataOrigin.forEach((ele:any) => {
+            if(ele.region == reg)
+            {
+                this.dataSelect.push(ele)
+            }
         })
     }
 
@@ -28,7 +42,8 @@ export class TesteComponent {
     }
 
     actuallySelect: string = "Filter by Contry"
-    clickSelect(ele: string) {
-        this.actuallySelect = ele
+    clickSelect(reg: string) {
+        this.actuallySelect = reg
+        this.showContries(reg)
     }
 }
