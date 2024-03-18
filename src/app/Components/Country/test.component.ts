@@ -22,4 +22,13 @@ export class TesteComponent {
             // console.log(this.dados)
         })
     }
+
+    clickFilter() {
+        document.querySelector('.filterCountry')?.classList.toggle('show')
+    }
+
+    actuallySelect: string = "Filter by Contry"
+    clickSelect(ele: string) {
+        this.actuallySelect = ele
+    }
 }

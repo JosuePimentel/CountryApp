@@ -5,15 +5,15 @@
             <input type="text" name="country" id="searchCountry" placeholder="Search for a country...">
         </div>
 
-        <div class="filterCountry">
-            <select name="" id="">
-                <option value="all" selected>Filter By Region</option>
-                <option value="Africa">Africa</option>
-                <option value="America">America</option>
-                <option value="Asia">Asia</option>
-                <option value="Europe">Europe</option>
-                <option value="Oceania">Oceania</option>
-            </select>
+        <div class="filterCountry" >
+            <label (click)="clickFilter()"><span>{{actuallySelect}}</span> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></svg></label>
+            <div id="select">
+                <span all>Filter by Country</span>
+                <span asia (click)="clickSelect('Asia')">Asia</span>
+                <span america (click)="clickSelect('America')">America</span> 
+                <span europe (click)="clickSelect('Europe')">Europe</span>
+                <span oceania (click)="clickSelect('Oceania')">Oceania</span>
+            </div>
         </div>
     </div>
 

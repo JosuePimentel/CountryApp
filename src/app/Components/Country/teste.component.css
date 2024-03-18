@@ -13,16 +13,16 @@ main {
 .filterContainer > div {
     height: 100%;
     border-radius: 5px;
-    padding: 10px 40px;
-
+    
     background-color: #fff;
     box-shadow: 0 0px 10px -5px #000;
-
+    
     display: flex;
     align-items: center;
 } 
 
 .filterContainer > .search {
+    padding: 10px 40px;
     width: 400px;
 }
 
@@ -41,14 +41,76 @@ main {
 
 .filterContainer > .filterCountry {
     width: 200px;
+    
     justify-content: center;
+    
+    position: relative;
+}
+
+.filterContainer > .filterCountry > label {
+    padding: 10px 20px;
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+}
+
+.filterContainer > .filterCountry > label > span {
+    text-wrap: nowrap;
+    width: 112px;
+} 
+
+.filterContainer > .filterCountry.show > label > svg {
+    transform: rotateX(180deg);
+}
+
+.filterContainer > .filterCountry > div#select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    transform: translateY(-10px);
+
+    background-color: #fff;
+
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    
+    position: absolute;
+    bottom: -215px;
+    z-index: 100;
+}
+
+.filterContainer > .filterCountry.show > div#select {
+    display: flex;
+    transform: translateY(0);
+}
+
+.filterContainer > .filterCountry > div#select > span {
+    padding: 5px;
+
+}
+
+.filterContainer > .filterCountry > div#select > span:not(:first-child) {
+    cursor: pointer;
+}
+
+.filterContainer > .filterCountry > div#select > span:first-child {
+    color: #333;
+}
+
+.filterContainer > .filterCountry > div#select > span:hover:not(:first-child) {
+    font-weight: bold;
 }
 
 .filterContainer svg {
     width: 20px;
 }
 
-input, select {
+input {
     outline: none;
     border: none;
     background-color: transparent;
@@ -71,6 +133,10 @@ input, select {
 
     background-color: var(--White);
     box-shadow: 0 0px 10px -5px #000;
+}
+
+.countryContainer > .card:hover {
+    transform: scale(1.1);
 }
 
 .countryContainer > .card > .containerCard {
