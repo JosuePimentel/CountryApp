@@ -1,0 +1,55 @@
+main {
+    padding: 50px 100px;
+}
+
+.filterContainer {
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filterContainer > div {
+    height: 100%;
+    border-radius: 5px;
+    padding: 10px 40px;
+
+    background-color: #fff;
+    box-shadow: 0 0px 10px -5px #000;
+
+    display: flex;
+    align-items: center;
+} 
+
+.filterContainer > .search {
+    width: 400px;
+}
+
+.filterContainer > .search > label {
+    display: flex;
+    align-items: center;
+
+    padding-right: 25px;
+}
+
+.filterContainer > .search > input {
+    height: 0;
+    width: 100%;
+    padding: 25px 0;
+}
+
+.filterContainer > .filterCountry {
+    width: 200px;
+    justify-content: center;
+}
+
+.filterContainer svg {
+    width: 20px;
+}
+
+input, select {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
