@@ -53,3 +53,44 @@ input, select {
     border: none;
     background-color: transparent;
 }
+
+.countryContainer {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.countryContainer > .card {
+    cursor: pointer;
+
+    overflow: hidden;
+
+    width: 300px;
+    border-radius: 3px;
+
+    background-color: var(--White);
+    box-shadow: 0 0px 10px -5px #000;
+}
+
+.countryContainer > .card > .containerCard {
+    padding: 20px 20px 30px;
+}
+
+.countryContainer > .card > .containerCard > h4 {
+    font-size: 18px;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+
+.countryContainer > .card > .containerCard > div {
+    font-size: 14px;
+
+    display: flex;
+    padding-bottom: 4px;
+    gap: 5px;
+}
+
+.countryContainer img {
+    width: 100%;
+}

@@ -8,4 +8,6 @@ import { Component } from "@angular/core";
     styleUrl: "./country.component.css"
 })
 
-export class CountryComponent {}
+export class CountryComponent {
+    // data = JSON.parse("/assets/data.json")
+}
