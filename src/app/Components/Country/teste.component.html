@@ -18,18 +18,18 @@
     </div>
 
     <div class="countryContainer">
-        <!-- @for (country of dados; track $index) {
+        @for (country of dados; track $index) {
             <div class="card">
-                <div class="img"><img src="/assets/flagBrazil.png" alt=""></div>
+                <div class="img"><img src="{{country.flags.png}}" alt=""></div>
                 <div class="containerCard">
                     <h4>{{country.name}}</h4>
                     <div class="population">
                         <strong>Population: </strong>
-                        <p class="dataPop">{{country.population}}</p>
+                        <p class="dataPop">{{(country.population).toLocaleString('en')}}</p>
                     </div>
                     <div class="region">
                         <strong>Region: </strong>
-                        <p class="dataReg">{{country.reg}}</p>
+                        <p class="dataReg">{{country.region}}</p>
                     </div>
                     <div class="capital">
                         <strong>Capital: </strong>
@@ -37,6 +37,6 @@
                     </div>
                 </div>
             </div>
-        } -->
+        }
     </div>
 </main>

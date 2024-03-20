@@ -10,16 +10,16 @@ import { DataService } from "../../services/data.service";
 })
 
 export class TesteComponent {
-    // dados: any
+    dados: any
 
-    // constructor(private meuServico: DataService) {
-    //     this.getDadosJSON()
-    // }
+    constructor(private meuServico: DataService) {
+        this.getDadosJSON()
+    }
 
-    // getDadosJSON() {
-    //     this.meuServico.getCountry().subscribe(resp => {
-    //         this.dados = resp
-    //         console.log(this.dados)
-    //     })
-    // }
+    getDadosJSON() {
+        this.meuServico.getCountry().subscribe(resp => {
+            this.dados = resp
+            // console.log(this.dados)
+        })
+    }
 }
