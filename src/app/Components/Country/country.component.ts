@@ -5,12 +5,12 @@ import { FormsModule } from "@angular/forms";
 @Component({
     selector: 'app-teste',
     standalone: true,
-    templateUrl: './teste.component.html',
-    styleUrl: './teste.component.css',
+    templateUrl: './country.component.html',
+    styleUrl: './country.component.css',
     imports: [FormsModule]
 })
 
-export class TesteComponent {
+export class CountryComponent {
     dataOrigin: any
     dataSelect: any
 

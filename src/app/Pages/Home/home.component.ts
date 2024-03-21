@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../../Components/Header/header.component';
-import { TesteComponent } from '../../Components/Country/test.component';
+import { CountryComponent } from '../../Components/Country/country.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
     selector: "app-home",
     standalone: true,
-    imports:[HeaderComponent, TesteComponent, HttpClientModule],
+    imports:[HeaderComponent, CountryComponent, HttpClientModule],
     templateUrl: "./home.component.html",
     styleUrl: "./home.component.css"
 })
