@@ -13,7 +13,7 @@ main {
     height: 100%;
     border-radius: 5px;
     
-    background-color: #fff;
+    background-color: var(--ColorCard);
     box-shadow: 0 0px 10px -5px #000;
     
     display: flex;
@@ -37,6 +37,12 @@ main {
     height: 0;
     width: 100%;
     padding: 25px 0;
+
+    color: var(--ColorFont);
+}
+
+.filterContainer > .search > input::placeholder {
+    color: var(--ColorFont);
 }
 
 .filterContainer > .filterCountry {
@@ -73,9 +79,8 @@ main {
     padding: 15px;
     border-radius: 5px;
     transform: translateY(-10px);
-
     box-shadow: 0 0px 10px -5px #000;
-    background-color: #fff;
+    background-color: var(--ColorCard);
 
     display: none;
     flex-direction: column;
@@ -123,17 +128,19 @@ input {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    justify-items: start;
 }
 
 .countryContainer > .card {
     cursor: pointer;
-
     overflow: hidden;
+    justify-self: center;
 
-    min-width: 300px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 3px;
 
-    background-color: var(--White);
+    background-color: var(--ColorCard);
     box-shadow: 0 0px 10px -5px #000;
 }
 
@@ -162,6 +169,8 @@ input {
 .countryContainer img {
     width: 100%;
     height: 200px;
+
+    object-fit: cover;
 }
 
 @media (max-width: 830px) {

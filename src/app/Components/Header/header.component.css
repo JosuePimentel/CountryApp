@@ -7,7 +7,7 @@ main {
     justify-content: space-between;
     align-items: center;
 
-    background-color: var(--White);
+    background-color: var(--ColorCard);
     box-shadow: 0 0px 10px -5px #000;
 }
 
@@ -17,18 +17,23 @@ main > .mode {
     align-items: center;
     
     font-size: 14px;
-
-    cursor: pointer;
-
 }
 
 main > .mode > p {
     text-wrap: nowrap;
     font-weight: bold;
+    cursor: pointer;
 }
 
-main > .mode > svg {
+main > .mode > label > svg {
     width: 20px;
+}
+
+main > .mode > label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 @media (max-width: 500px) {

@@ -1,12 +1,13 @@
 import { Component } from "@angular/core";
 import { DataService } from "../../services/data.service";
+import { FormsModule } from "@angular/forms";
 
 @Component({
     selector: 'app-teste',
     standalone: true,
     templateUrl: './teste.component.html',
     styleUrl: './teste.component.css',
-    imports: []
+    imports: [FormsModule]
 })
 
 export class TesteComponent {
@@ -26,8 +27,6 @@ export class TesteComponent {
     }
 
     showContries(reg: string) {
-        let container = document.querySelector('.countryContainer')
-
         this.dataSelect = []
         this.dataOrigin.forEach((ele:any) => {
             if(ele.region == reg)
@@ -44,6 +43,27 @@ export class TesteComponent {
     actuallySelect: string = "Filter by Contry"
     clickSelect(reg: string) {
         this.actuallySelect = reg
-        this.showContries(reg)
+        if(reg != 'Filter by Country')
+            this.showContries(reg)
     }
+
+    // onKeydown(event: KeyboardEvent): void {
+    //     console.log(`Tecla pressionada: ${event.key}`);
+    //   }
+
+    valueString: string = ''
+    keySearch(event: KeyboardEvent): void {
+        this.clickSelect('Filter by Country')
+        if(event.key == 'Enter')
+        {
+            this.dataSelect = []
+            this.dataOrigin.forEach((ele: any) => {
+                if(ele.name.toLowerCase().includes(this.valueString.toLowerCase()) || ele.region.toLowerCase().includes(this.valueString.toLowerCase()))
+                {
+                    this.dataSelect.push(ele)
+                }
+            })
+        }
+    }
+    
 }
